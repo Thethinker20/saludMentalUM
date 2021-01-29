@@ -9,6 +9,15 @@ const app = express();
 
 app.set("views", path.join(__dirname, "views"));
 
+const mimetypes = {
+  'html': 'text/html',
+  'css': 'text/css',
+  'js': 'text/javascript',
+  'png': 'image/png',
+  'jpeg': 'image/jpeg',
+  'jpg': 'image/jpg'
+};
+
 const hbs = exphbs.create({
   defaultLayout: "main",
   layoutsDir: path.join(app.get("views"), "layouts"),
